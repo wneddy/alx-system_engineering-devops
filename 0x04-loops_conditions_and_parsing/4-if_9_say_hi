@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#The script is printing hi at line 9.
+
+num=1
+while [ $num -le 10 ]
+do
+	if [ $num -eq 9 ]; then
+		echo "Best School"
+		echo "Hi"
+	else
+		echo "Best School"
+	fi
+	num=$((num + 1))
+done
