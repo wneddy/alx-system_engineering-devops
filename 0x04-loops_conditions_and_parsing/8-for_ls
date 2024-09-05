@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#script displays; pwd, list in format.
+
+for file in *; do
+	if [[ $file == *-* ]]; then
+		echo "${file#*-}"
+	else
+		echo "$file"
+	fi
+done
