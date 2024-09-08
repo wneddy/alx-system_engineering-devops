@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #script that displays a list of currently running processes.
 
-ps -eo user,pid,tty,cmd --sort=user | head -n 50
+ps -eo user | head 50
