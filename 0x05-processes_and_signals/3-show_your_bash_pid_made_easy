@@ -2,9 +2,9 @@
 #script that displays the PID, along with the process name, of processes whose name contain the word bash.
 
 #for pid in $(ls /proc | grep -E '^[0-9]+$'); do
-	if [ -f "/proc/$pid/comm"]; then
+	if [ -f "/proc/$pid/comm" ]; then
 		proc_name=$(cat /proc/$pid/comm)
-		if echo "proc_name" | grep -q "bash"; then
+		if echo "$proc_name" | grep -q "bash"; then
 			echo "$pid $proc_name"
 		fi
 	fi
