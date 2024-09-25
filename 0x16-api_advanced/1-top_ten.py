@@ -5,8 +5,12 @@ the titles of the first 10 hot posts listed for a given subreddit.
 """
 import requests
 
+
 def top_ten(subreddit):
-    """Fetches and prints the titles of the first 10 hot posts from a subreddit."""
+    """
+    Fetches and prints the titles of the first 10
+    hot posts from a subreddit.
+    """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
     headers = {'User-agent': 'Mozilla/5.0'}
 
@@ -23,5 +27,5 @@ def top_ten(subreddit):
                 print(post['data']['title'])
         else:
             print(None)
-    except Exception as e:
+    except requests.RequestException:
         print(None)
